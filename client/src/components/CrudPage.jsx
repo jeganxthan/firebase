@@ -1,0 +1,15 @@
+import React from 'react';
+import { signOut } from 'firebase/auth';
+import { auth } from '../firebase';
+
+export default function CrudPage() {
+
+  return (
+    <div>
+      <h1>CRUD Page</h1>
+      <button onClick={() => signOut(auth).then(() => window.location.href = '/')}>
+        Sign Out
+      </button>
+    </div>
+  );
+}
